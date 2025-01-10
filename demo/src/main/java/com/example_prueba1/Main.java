@@ -3,15 +3,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int num, factorial, i;
+        int num, factorial, facBackup, i;
 
         try (Scanner input = new Scanner(System.in)) {
             System.out.println("Ingrese el Factorial");
             factorial = input.nextInt();
 
-            System.out.println("Vuelve a ingresar el numero");
-            num = input.nextInt();
+            num = factorial;
+            facBackup = factorial;
+            
         }
+
+        System.out.println("--------------------");
 
         for(i = factorial; i > 1; i--)
         {
@@ -24,5 +27,9 @@ public class Main {
             System.out.println("= " + num);
 
         }
+
+        System.out.println("--------------------");
+
+        System.out.println("El factorial de " + facBackup + "! es: " + num);
     }
 }
