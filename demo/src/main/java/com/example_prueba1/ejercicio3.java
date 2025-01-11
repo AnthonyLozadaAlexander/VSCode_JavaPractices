@@ -19,7 +19,7 @@ public class ejercicio3 {
     else{
       while(esPrimo && Divisible < Math.sqrt(num))
       {
-        if(num % Divisible == 0)
+        if(num % Divisible == 0) // num % 2 == 0
         {
            esPrimo = false;
         }
