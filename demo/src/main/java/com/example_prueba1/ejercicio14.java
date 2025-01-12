@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ejercicio14 {
   public static void main(String[] args) {
+
     String respuesta;
     boolean On = true;
     Scanner input = new Scanner(System.in);
@@ -26,9 +27,15 @@ public class ejercicio14 {
       System.out.println("Desea Continuar o Salir del bucle? (Continuar/Salir)");
       respuesta = input.nextLine();
       if(respuesta.equalsIgnoreCase("Salir")){
+        System.out.println("Seleccion: " + respuesta);
+        System.out.println("Saliendo del bucle");
         On = false;
       }
-      
+      else{
+        System.out.println("Seleccion: " + respuesta);
+        System.out.println("Continuando en el bucle");
+      }
+
     }
   } 
 }
