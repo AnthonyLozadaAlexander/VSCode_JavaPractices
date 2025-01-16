@@ -26,5 +26,6 @@ public class ejercicio16 {
           System.out.println("num = " + count);
           count--;   
         }
+      System.out.println("Feliz año nuevo");
   }
 }
