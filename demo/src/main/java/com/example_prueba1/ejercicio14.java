@@ -16,7 +16,8 @@ public class ejercicio14 {
     System.out.println("---------------------------------------------\n");
 
     System.out.println("Cuenta regresiva del 10 al 1\n");
-    for(int i = 10; i > 0; i--){
+    for(int i = 10; i > 0; i--)
+    {
       System.out.println(i);
     }
     System.out.println("Feliz año nuevo");
