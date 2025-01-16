@@ -16,14 +16,13 @@ public class ejercicio15 {
 
       while(!palabra.equalsIgnoreCase("salir") && !palabra.equalsIgnoreCase("Exit")) //? Mientras la palabra no sea igual a "salir" o a exit
       {
-        palabra = input.nextLine();
         System.out.println("La palabra es: " + palabra);
 
         System.out.println("Ingrese la palabra que quiera mostrar por teclado");
         palabra = input.nextLine();
 
       }
-    
+     System.out.println("Gracias por usar el Programa");
   }
 
 }
