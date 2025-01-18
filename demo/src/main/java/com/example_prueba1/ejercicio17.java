@@ -11,7 +11,8 @@ public class ejercicio17 {
        */
 
        String patente = "";
-       int tipoServicio;
+       int tipoServicio, cantHoras;
+       double montoPagar, total;
        Scanner input = new Scanner(System.in);
 
        /*
@@ -34,8 +35,32 @@ public class ejercicio17 {
         }
         else
         {
-          
+          /*
+           * Los tipos de estacionamiento disponibles son 3:
+           * Por hora: $3 USD por hora
+           * Media Jornada: $15 USD y posee 5% de descuento
+           * Jornada Completa: $30 USD y posee 10% de descuento 
+           */
+          if(tipoServicio == 1)
+          {
+            System.out.println("El monto a pagar es de $3 USD");
+            cantHoras = input.nextInt();
+            total = cantHoras * 3;
+          }
+          else{
+            if(tipoServicio == 2){
+              System.out.println("El servicio de media jornada corresponde a 5 horas y posee un descuento del 5%");
+              total = 15 - (15 * 0.05); // calculo descuento
+              System.out.println("El total de su estacionamiento es de: " + total);
+            }
+            else{
+              System.out.println("El servicio de jornada completa corresponde a 10 horas y posee un descuento del 10%");
+              total = 30 - (30 * 0.10); // calculo descuento
+              System.out.println("El total de su estacionamiento es de: " + total);
+            }
+          }
         }
-       }
+        System.out.println("*****Muchas Gracias Por Su Compra!*****");
+     }
   } 
 }
