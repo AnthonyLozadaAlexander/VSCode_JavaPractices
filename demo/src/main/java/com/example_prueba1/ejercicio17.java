@@ -55,7 +55,8 @@ public class ejercicio17 {
                         System.out.println("El total de su estacionamiento es de: " + total);
                         cont2 = cont2 + 1;
                         totalDia = totalDia + total;
-                    } else {
+                    }
+                    else {
                         System.out.println("El servicio de jornada completa corresponde a 10 horas y posee un descuento del 10%");
                         System.out.println("-------------------------------------");
                         total = 30 - (30 * 0.10); // calculo descuento
@@ -66,10 +67,11 @@ public class ejercicio17 {
                     }
                 }
             }
+
+            System.out.println("");
+            System.out.println("*****Muchas Gracias Por Su Compra!*****\n");
+            input = new Scanner(System.in); // Reset Scanner
         }
-        System.out.println("");
-        System.out.println("*****Muchas Gracias Por Su Compra!*****");
-        input = new Scanner(System.in); // Reset Scanner
      }
      System.out.println("---------------------------------------------");
      System.out.println("Totales Monetarios Del Dia");
