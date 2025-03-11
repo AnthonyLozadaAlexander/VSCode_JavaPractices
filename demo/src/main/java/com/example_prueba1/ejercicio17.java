@@ -12,7 +12,7 @@ public class ejercicio17 {
 
        String patente = "";
        int tipoServicio, cantHoras, cont1 = 0, cont2 = 0, cont3 = 0;
-       double montoPagar, total, totalDia = 0;
+       double total, totalDia = 0;
        Scanner input = new Scanner(System.in);
 
        /*
