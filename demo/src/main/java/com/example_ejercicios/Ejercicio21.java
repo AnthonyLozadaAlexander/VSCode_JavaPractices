@@ -6,11 +6,11 @@ public class Ejercicio21 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         float[] ventas = new float[30];
-        int Indices = 0;
         float countTotal = 0;
         float total = 0;
         int count = 0;
-        System.out.println("----------------VENTAS----------------");
+        System.out.println("-------------------VENTAS---------------------");
+        System.out.println("----------------------------------------------");
         System.out.println("Ingrese las 30 ventas del mes");
         for (int i = 0; i < 30; i++) {
             System.out.println("Ingrese la venta del dia["+i+"]");
@@ -34,6 +34,7 @@ public class Ejercicio21 {
         System.out.println("-----------------------------------------------");
         System.out.println("Dias que superaron los 2000$");
         System.out.println("----------------------------------------------");
+        int Indices = 0;
         while(Indices < 30){
             if(ventas[Indices] > 2000){
                 System.out.println("Dia["+Indices+"] = " + ventas[Indices]);
