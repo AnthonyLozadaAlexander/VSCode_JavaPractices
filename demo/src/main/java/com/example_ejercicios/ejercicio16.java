@@ -1,4 +1,4 @@
-package com.example_prueba1;
+package com.example_ejercicios;
 
 public class ejercicio16 {
   public static void main(String[] args) 

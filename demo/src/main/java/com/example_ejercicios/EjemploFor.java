@@ -1,6 +1,6 @@
-package com.example_prueba1;
+package com.example_ejercicios;
 
-public class for_1 {
+public class EjemploFor {
   public static void main(String[] args) {
 
     /* 

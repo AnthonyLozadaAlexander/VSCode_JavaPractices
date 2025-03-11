@@ -1,4 +1,4 @@
-package com.example_prueba1;
+package com.example_ejercicios;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ public class Ejercicio20 {
         Scanner input = new Scanner(System.in);
         float[] ventas = new float[30];
         System.out.println("----------------VENTAS----------------");
-        System.out.println("Ingrese las ventas del mes");
+        System.out.println("Ingrese las 30 ventas del mes");
         for(int i = 0; i < ventas.length; i++){
             System.out.println("Ingrese la venta del dia ["+(i+1)+"]");
             System.out.print("-> ");
@@ -21,14 +21,13 @@ public class Ejercicio20 {
         }
         int count = 0;
         // int indice = 0;
-
+        System.out.println("---------------------------------------");
         for(int i = 0; i < ventas.length; i++){
             if(ventas[i] > 2000){
                 System.out.println("La venta ["+i+"] = "+ ventas[i] +"$, supera los 2000$");
                 count = count + 1;
             }
         }
-
         System.out.println("Fueron "+count+" ventas que superaron los 2000$ dolares");
     }
 }
