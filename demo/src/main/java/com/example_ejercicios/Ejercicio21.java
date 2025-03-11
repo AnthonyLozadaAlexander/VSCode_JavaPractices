@@ -34,6 +34,7 @@ public class Ejercicio21 {
         System.out.println("-----------------------------------------------");
         System.out.println("Dias que superaron los 2000$");
         System.out.println("----------------------------------------------");
+
         int Indices = 0;
         while(Indices < 30){
             if(ventas[Indices] > 2000){
@@ -44,6 +45,7 @@ public class Ejercicio21 {
             Indices = Indices + 1; // incrementador del la condicion while para que no sea un bucle infinito
             total = total + ventas[Indices];
         }
+
         System.out.println("-----------------------------------------------");
         System.out.println("fueron " + count + " ventas en el mes que superaron los 2000$");
         System.out.println("Total de ventas mayores a 2000$ = " + countTotal + "$");
