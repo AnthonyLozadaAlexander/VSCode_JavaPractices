@@ -13,7 +13,6 @@ public class Ejercicio22 {
             nums[i] = input.nextInt();
         }
         System.out.println("---------------------------------------");
-
         int mayor = nums[0];
         int indice = 0;
         System.out.println("Los numeros ingresados son: ");
@@ -24,7 +23,6 @@ public class Ejercicio22 {
                 indice = i;
             }
         }
-
         System.out.println("-----------------------------------------");
         System.out.println("El numero mayor es: ");
         System.out.println("num["+indice+"] = " + mayor);
