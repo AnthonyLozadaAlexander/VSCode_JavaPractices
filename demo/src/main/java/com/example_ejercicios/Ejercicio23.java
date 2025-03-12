@@ -23,11 +23,11 @@ public class Ejercicio23 {
                 System.out.println("\nError: Ingrese un número mayor a 0\n");
                 continuar = true;
             }
-            else if(cantidad > 50){
+            else if(cantidad >= 50 && cantidad < 100){
                 precioTotal = cantidad * precio50;
                 continuar = false;
             }
-            else if(cantidad > 100){
+            else if(cantidad >= 100){
                 precioTotal = cantidad * precio100;
                 continuar = false;
             }
