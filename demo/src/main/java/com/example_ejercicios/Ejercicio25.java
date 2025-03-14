@@ -18,7 +18,7 @@ public class Ejercicio25 {
         continue;
       }
       nums = input.nextFloat();
-      if(nums < 0){
+      if(nums <= 0){
         System.out.println("\n--------------------------------------------------");
         System.out.println("           Finalizacion Del Programa");
         System.out.println("----------------------------------------------------\n");
