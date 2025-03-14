@@ -20,7 +20,7 @@ public class Ejercicio25 {
       nums = input.nextFloat();
       if(nums < 0){
         System.out.println("\n--------------------------------------------------");
-        System.out.println("Error: Debe ingresar un numero positivo");
+        System.out.println("           Finalizacion Del Programa");
         System.out.println("----------------------------------------------------\n");
       }
       else{
