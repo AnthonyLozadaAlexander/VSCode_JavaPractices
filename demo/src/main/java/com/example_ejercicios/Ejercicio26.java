@@ -35,7 +35,7 @@ public class Ejercicio26 {
             }
 
         System.out.println("-------------------------------------------------------");
-        for (int tMax = 0; tMax < temperaturasMin.length; tMax++) {
+        for (int tMax = 0; tMax < temperaturasMax.length; tMax++) {
             System.out.println("Ingrese la temperatura maxima de la ciudad " + ciudades[tMax]);
             System.out.print("-> ");
 
