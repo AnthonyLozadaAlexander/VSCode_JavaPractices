@@ -57,6 +57,22 @@ public class Ejercicio26 {
             System.out.println("Temperaturas Maximas: " + temperaturasMax[i]);
         }
         System.out.println("-------------------------------------------------------");
+        int indiceMax = 0, indiceMin = 0;
+        float max = temperaturasMax[0];
+        float min = temperaturasMin[0];
+        for(int i = 0; i < ciudades.length; i++){
+            if(temperaturasMax[i] > max){
+                max = temperaturasMax[i];
+                indiceMax = i;
+            }
+            if(temperaturasMin[i] < min){
+                min = temperaturasMin[i];
+                indiceMin = i;
+            }
+        }
+
+        System.out.println(ciudades[indiceMax] + " = Tiene una temperatura maxima de " + max + " grados");
+        System.out.println(ciudades[indiceMin] + " = Tiene una temperatura minima de " + min + " grados");
 
     }
 }
