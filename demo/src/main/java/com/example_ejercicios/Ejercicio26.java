@@ -52,9 +52,11 @@ public class Ejercicio26 {
         System.out.println("-------------------------------------------------------");
         System.out.println("Datos Ingresados");
         for(int i = 0; i < ciudades.length; i++){
+            System.out.println("---------------------------------------------------");
             System.out.println("Ciudad: " + ciudades[i]);
             System.out.println("Temperaturas Minimas: " + temperaturasMin[i]);
             System.out.println("Temperaturas Maximas: " + temperaturasMax[i]);
+            System.out.println("---------------------------------------------------\n");
         }
         System.out.println("-------------------------------------------------------");
         int indiceMax = 0, indiceMin = 0;
