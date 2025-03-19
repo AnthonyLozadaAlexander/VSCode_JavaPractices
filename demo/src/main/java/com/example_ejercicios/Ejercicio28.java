@@ -57,7 +57,6 @@ public class Ejercicio28 {
                 count = count+ 1;
             }
             totalKilos = totalKilos + cantKilos;
-
         }
 
         System.out.println("\nDetalles De Las Ventas");
