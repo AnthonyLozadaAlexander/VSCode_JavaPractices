@@ -16,9 +16,10 @@ public class Ejercicio28 {
 
         for(int i = 1; i <= 5; i++)
         {
+            input = new Scanner(System.in); // Reiniciar el Scanner para cada iteración
             System.out.println("\nFactura N°("+i+")");
             System.out.println("Ingrese el codigo del producto");
-            System.out.println("-> ");
+            System.out.print("-> ");
             codigo = input.nextLine();
             do {
                 System.out.println("\nIngrese la cantidad de kilos");
@@ -60,6 +61,7 @@ public class Ejercicio28 {
         }
 
         System.out.println("\nDetalles De Las Ventas");
+        System.out.println("Ventas Superios a $1000: "+ count);
         System.out.println("Facturacion Total: " + facturacionTotal);
         System.out.println("Total De Kilos Vendidos: " + totalKilos);
     }
