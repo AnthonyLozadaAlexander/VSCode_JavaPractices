@@ -32,11 +32,9 @@ public class Ejercicio27 {
             }
         }
 
-        promedioP = sumaP / countP;
-        promedioN = sumaN / countN;
-
         if(countP == 0) System.out.println("\nNo se puede realizar el promedio de numeros Positivos dado que no hay numeros Positivos Ingresados");
         else{
+            promedioP = sumaP / countP;
             System.out.println("\nNumeros Positivos Ingresados -> "+ countP);
             System.out.println("La suma de los numeros Positivos es: " + sumaP);
             System.out.println("El Promedio de los numeros positivos es: " + promedioP);
@@ -44,6 +42,7 @@ public class Ejercicio27 {
         }
         if(countN == 0) System.out.println("\n No se puede realizar el promedio de numeros Negativos dado que no hay numeros Negativos Ingresados");
         else{
+            promedioN = sumaN / countN;
             System.out.println("Numeros Negativos -> "+ countN);
             System.out.println("La suma de los numeros Negativos es: " + sumaN);
             System.out.println("El Promedio de los numeros negativos es: " + promedioN);
