@@ -21,6 +21,9 @@ public class Ejercicio28 {
             System.out.println("Ingrese el codigo del producto");
             System.out.print("-> ");
             codigo = input.nextLine();
+
+            System.out.println("\nCodigo ingresado: " + codigo+ "\n");
+
             do {
                 System.out.println("\nIngrese la cantidad de kilos");
                 System.out.print("-> ");
