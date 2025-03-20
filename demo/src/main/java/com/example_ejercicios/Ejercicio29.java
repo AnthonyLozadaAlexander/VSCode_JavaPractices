@@ -26,37 +26,21 @@ public class Ejercicio29 {
             }
         }while(horas <= 0);
 
-        do {
-            System.out.println("Ingrese las Horas Extras Trabajadas");
-            System.out.print("-> ");
-            if (!input.hasNextInt()) {
-                System.out.println("\nError: Debe Ingresar Numeros Enteros\n");
-                input.next();
-                continue;
-            }
-            horasExtra = input.nextInt();
-            if (horasExtra < 0) {
-                System.out.println("\nError: Debe Ingresar Numeros Enteros Positivos\n");
-            } else {
-                System.out.println("\nHoras Extras Ingresadas Correctamente\n");
-            }
-        }while(horasExtra < 0);
-
         if(horas <= 40){
             sueldoxHora = 16;
             total = sueldoxHora * horas;
 
             System.out.println("Horas Trabajadas: " + horas);
-            System.out.println("Horas Extra: " + horasExtra);
+            System.out.println("Horas Extra: " + (horas-40));
             System.out.println("Salario Semanal: "+total);
         }
         else if(horas > 40){
             sueldoxHora = 16;
             sueldoExtra = 20;
 
-            total = (sueldoxHora * 40) + (sueldoExtra * horasExtra);
+            total = (sueldoxHora * 40) + ((horas-40)) * (sueldoExtra);
             System.out.println("Horas Trabajadas: " + horas);
-            System.out.println("Horas Extra: " + horasExtra);
+            System.out.println("Horas Extra: " + (horas-40));
             System.out.println("Salario Semanal: "+total);
         }
 
