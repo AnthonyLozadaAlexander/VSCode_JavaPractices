@@ -6,22 +6,37 @@ import java.util.Scanner;
 public class ejercicio5 {
   public static void main(String[] args)
   {
-   boolean On = true;
-   
-   while(On){
-    Random azar = new Random();
-    Scanner input = new Scanner(System.in);
-    int a, b, capsula;
-     
-     System.out.println("Ingrese el valor de a");
-     a = input.nextInt();
-     
-     System.out.println("Ingrese el valor de b");
-     b = input.nextInt();
+      boolean on = true;
+      Scanner input = new Scanner(System.in);
+      Random azar = new Random();
 
-     capsula = azar.nextInt(a,b);
-    
-     System.out.println("El numero de capsula es: " + capsula);
-    } 
+      while (on) {
+          System.out.println("Ingrese el valor de a");
+          int a = input.nextInt();
+
+          System.out.println("Ingrese el valor de b");
+          int b = input.nextInt();
+
+          // Asegurar que a < b para evitar errores
+          if (a > b) {
+              int temp = a;
+              a = b;
+              b = temp;
+              System.out.println("Se intercambiaron los valores para obtener un rango válido");
+          }
+
+          int capsula = azar.nextInt(a, b);
+          System.out.println("El número de cápsula es: " + capsula);
+
+          System.out.println("¿Desea continuar? (S/N)");
+          input.nextLine(); // Consumir el salto de línea pendiente
+          String respuesta = input.nextLine();
+
+          if (respuesta.equalsIgnoreCase("N")) {
+              on = false;
+          }
+      }
+
+      input.close();
   }
 }
