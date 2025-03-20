@@ -24,7 +24,7 @@ public class ejercicio8 {
       System.out.println("El numero " + num + " es cero");
     }
     }catch (InputMismatchException e){
-      System.out.println("Dato no valido");
+      System.out.println("Error: Dato no valido");
     }
   }   
 }
