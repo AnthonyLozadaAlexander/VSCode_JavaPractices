@@ -30,19 +30,16 @@ public class Ejercicio29 {
             sueldoxHora = 16;
             total = sueldoxHora * horas;
 
-            System.out.println("Horas Trabajadas: " + horas);
-            System.out.println("Horas Extra: " + (horas-40));
-            System.out.println("Salario Semanal: "+total);
         }
         else if(horas > 40){
             sueldoxHora = 16;
             sueldoExtra = 20;
 
             total = (sueldoxHora * 40) + ((horas-40)) * (sueldoExtra);
-            System.out.println("Horas Trabajadas: " + horas);
-            System.out.println("Horas Extra: " + (horas-40));
-            System.out.println("Salario Semanal: "+total);
         }
 
+        System.out.println("Horas Trabajadas: " + horas);
+        System.out.println("Horas Extra: " + (horas-40));
+        System.out.println("Salario Semanal: "+total);
     }
 }
