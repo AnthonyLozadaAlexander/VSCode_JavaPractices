@@ -26,7 +26,7 @@ public class ejercicio9 {
          }
          
         } catch (Exception e) {
-          System.out.println("Dato no valido");
+          System.out.println("Error: Dato no valido");
       }      
   }
   
