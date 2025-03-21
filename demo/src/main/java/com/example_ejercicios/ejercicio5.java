@@ -28,7 +28,7 @@ public class ejercicio5 {
           int capsula = azar.nextInt(a, b);
           System.out.println("El número de cápsula es: " + capsula);
 
-          System.out.println("¿Desea continuar? (S/N)");
+          System.out.println("\n¿Desea continuar? (S/N)");
           input.nextLine(); // Consumir el salto de línea pendiente
           String respuesta = input.nextLine();
 
