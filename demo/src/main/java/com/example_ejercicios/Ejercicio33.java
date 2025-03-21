@@ -5,144 +5,133 @@ import java.util.Scanner;
 public class Ejercicio33 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String [] codigo = new String[5];
-        float cantLitros=0, precioLitro=0, facturacionTotal=0, count=0, countLitros=0, montoTotal =0, datoLitros=0, datoPrecios=0;
+        String[] codigo = new String[5];
+        float cantLitros = 0, precioLitro = 0, facturacionTotal = 0, countFacturas = 0, countLitros = 0, montoTotal = 0, datoLitros = 0, datoPrecios = 0;
         boolean On = false;
-        for(int i = 0; i < 5; i++){
-         input = new Scanner(System.in);
-         facturacionTotal = 0;
-         datoLitros = 0;
-         datoPrecios = 0;
-                System.out.println("\n----------------------------------");
-                System.out.println("        FACTURACION N("+(i+1)+")");
-                System.out.println("----------------------------------");
-                do{
+        for (int i = 0; i < 5; i++) {
+            facturacionTotal = 0;
+            datoLitros = 0;
+            datoPrecios = 0;
+            System.out.println("\n----------------------------------");
+            System.out.println("        FACTURACION N(" + (i + 1) + ")");
+            System.out.println("----------------------------------");
+            do {
+                input = new Scanner(System.in);
                 System.out.println("Ingrese el codigo del producto");
                 System.out.print("-> ");
                 codigo[i] = input.nextLine();
 
-                if(codigo[i] == ""){
+                if (codigo[i] == "") {
                     System.out.println("\nError: El Codigo No Puede Estar Vacio\n");
-                }
-                else{
+                } else {
                     System.out.println("\nCodigo Ingresado: " + codigo[i] + "\n");
-                    do{
+                    do {
                         input = new Scanner(System.in);
-                        System.out.println("Ingrese La Cantidad Vendida Por Litro");
+                        System.out.println("Ingrese La Cantidad De Litros");
                         System.out.print("-> ");
 
-                        if(!input.hasNextFloat()){
+                        if (!input.hasNextFloat()) {
                             System.out.println("\nError: Debe Ingresar Datos Numericos\n");
                             input.next();
 
-                            if(i == 0 || i < 5){
-                                do{
+                            if (i == 0 || i < 5) {
+                                do {
                                     input = new Scanner(System.in);
-                                    System.out.println("Ingrese La Cantidad Vendida Por Litro");
+                                    System.out.println("Ingrese La Cantidad De Litros");
                                     System.out.print("-> ");
-                                    if(!input.hasNextFloat()) {
+                                    if (!input.hasNextFloat()) {
                                         System.out.println("\nError: Debe Ingresar Datos Numericos\n");
                                         input.next();
                                         On = false;
-                                    }
-                                    else{
+                                    } else {
                                         float temporal = Float.parseFloat(input.next());
                                         if (temporal > 0) {
                                             datoLitros = temporal;
                                             On = true;
-                                        }
-                                        else
-                                        {
+                                        } else {
                                             System.out.println("\nError: Debe ingresar un valor mayor a 0\n");
                                             On = false;
                                         }
                                     }
 
-                                }while(On == false);
+                                } while (On == false);
                             }
                         }
-                        if(datoLitros > 0){
+                        if (datoLitros > 0) {
                             cantLitros = datoLitros;
-                        }
-                        else{
+                        } else {
                             cantLitros = input.nextFloat();
                         }
-                        if(cantLitros <= 0){
+                        if (cantLitros <= 0) {
                             System.out.println("\nError: Debe Ingresar La Cantidad Mayor a Cero\n");
-                        }
-                        else{
+                        } else {
                             countLitros = countLitros + cantLitros;
                             System.out.println("\nCantidad De Litros Ingresados: " + cantLitros + "\n");
-                            do{
+                            do {
                                 input = new Scanner(System.in);
                                 System.out.println("Ingrese El Precio");
                                 System.out.print("-> ");
 
-                                if(!input.hasNextFloat()){
+                                if (!input.hasNextFloat()) {
                                     System.out.println("\nError: Debe Ingresar Datos Numericos\n");
                                     input.next();
 
-                                    if(i == 0 || i < 5){
-                                        do{
+                                    if (i == 0 || i < 5) {
+                                        do {
                                             input = new Scanner(System.in);
                                             System.out.println("Ingrese El Precio Vendido Por Litro");
                                             System.out.print("-> ");
-                                            if(!input.hasNextFloat()) {
+                                            if (!input.hasNextFloat()) {
                                                 System.out.println("\nError: Debe Ingresar Datos Numericos\n");
                                                 input.next();
                                                 On = false;
-                                            }
-                                            else{
+                                            } else {
                                                 float temporal = Float.parseFloat(input.next());
                                                 if (temporal > 0) {
                                                     datoPrecios = temporal;
                                                     On = true;
-                                                }
-                                                else
-                                                {
+                                                } else {
                                                     System.out.println("\nError: Debe ingresar un valor mayor a 0\n");
                                                     On = false;
                                                 }
                                             }
 
-                                        }while(On == false);
+                                        } while (On == false);
                                     }
                                 }
-                                if(datoPrecios > 0){
+                                if (datoPrecios > 0) {
                                     precioLitro = datoPrecios;
-                                }
-                                else{
+                                } else {
                                     precioLitro = input.nextFloat();
                                 }
-                                if(precioLitro <= 0){
+                                if (precioLitro <= 0) {
                                     System.out.println("\nError: Debe Ingresar La Cantidad Mayor a Cero\n");
-                                }
-                                else {
+                                } else {
                                     System.out.println("\nPrecio De Venta Por Litros Ingresados: " + precioLitro + "\n");
                                 }
-                            }while(precioLitro <= 0);
+                            } while (precioLitro <= 0);
                         }
-                    }while(cantLitros <= 0);
+                    } while (cantLitros <= 0);
                 }
-            }while(codigo[i] == "");
+            } while (codigo[i] == "");
 
             facturacionTotal = (precioLitro * cantLitros);
             montoTotal = montoTotal + facturacionTotal;
-            if(facturacionTotal > 600){
-                count = count + 1;
+            if (facturacionTotal > 600) {
+                countFacturas = countFacturas + 1;
             }
 
         }
 
         System.out.println("\n-----------------------------");
-        System.out.println("           FACTURA");
+        System.out.println("           RESUMEN");
         System.out.println("\n-----------------------------");
-        for(int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             System.out.println("Codigos Ingresados: " + codigo[i]);
         }
         System.out.println("Cantidad De Litros Ingresados: " + countLitros);
-        System.out.println("Facturas Mayores a $600: " + count);
-        System.out.println("Monto Total: " + montoTotal);
+        System.out.println("Facturas Mayores a $600: " + countFacturas);
+        System.out.println("FacturacionTotal: " + montoTotal);
 
     }
 }
