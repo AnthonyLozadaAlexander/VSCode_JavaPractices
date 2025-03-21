@@ -6,7 +6,7 @@ public class Ejercicio33 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String[] codigo = new String[5];
-        float cantLitros = 0, precioLitro = 0, facturacionTotal = 0, countFacturas = 0, countLitros = 0, montoTotal = 0, datoLitros = 0, datoPrecios = 0;
+        float cantLitros = 0, precioLitro = 0, facturacionTotal = 0, countFacturas = 0, countLitros = 0, montoTotal = 0, datoLitros = 0, datoPrecios = 0, productoUno=0;
         boolean On = false;
         for (int i = 0; i < 5; i++) {
             facturacionTotal = 0;
@@ -65,7 +65,7 @@ public class Ejercicio33 {
                         if (cantLitros <= 0) {
                             System.out.println("\nError: Debe Ingresar La Cantidad Mayor a Cero\n");
                         } else {
-                            countLitros = countLitros + cantLitros;
+                            // countLitros = countLitros + cantLitros;
                             System.out.println("\nCantidad De Litros Ingresados: " + cantLitros + "\n");
                             do {
                                 input = new Scanner(System.in);
@@ -115,21 +115,27 @@ public class Ejercicio33 {
                 }
             } while (codigo[i] == "");
 
+            if(codigo[i].equalsIgnoreCase("1")){
+                productoUno = productoUno + cantLitros;
+            }
+
             facturacionTotal = (precioLitro * cantLitros);
             montoTotal = montoTotal + facturacionTotal;
             if (facturacionTotal > 600) {
                 countFacturas = countFacturas + 1;
             }
 
+            countLitros = countLitros + cantLitros;
         }
 
         System.out.println("\n-----------------------------");
         System.out.println("           RESUMEN");
-        System.out.println("\n-----------------------------");
+        System.out.println("-----------------------------");
         for (int i = 0; i < 5; i++) {
             System.out.println("Codigos Ingresados: " + codigo[i]);
         }
         System.out.println("Cantidad De Litros Ingresados: " + countLitros);
+        System.out.println("Cantidad De Litros Vendidos Del Articulo 1: " + productoUno);
         System.out.println("Facturas Mayores a $600: " + countFacturas);
         System.out.println("FacturacionTotal: " + montoTotal);
 
