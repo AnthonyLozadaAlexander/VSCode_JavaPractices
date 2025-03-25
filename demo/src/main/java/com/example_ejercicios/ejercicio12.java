@@ -5,11 +5,19 @@ import java.util.Scanner;
 public class ejercicio12 {
   public static void main(String[] args) {
       int x;
-      Scanner input = new Scanner(System.in);
+      do {
+          Scanner input = new Scanner(System.in);
 
-      System.out.println("Ingrese su calificacion");
-      x = input.nextInt();
+          System.out.println("Ingrese su calificacion");
+          x = input.nextInt();
 
+          if(x < 0){
+              System.out.println("\nError: La Calificacion Debe Ser Un Numero Natural\n");
+          }
+          else{
+              System.out.println("\nDato Ingresado: " + x + "\n");
+          }
+      }while(x < 0);
       switch (x) {
         case 10:
         System.out.println("Matricula de honor");
