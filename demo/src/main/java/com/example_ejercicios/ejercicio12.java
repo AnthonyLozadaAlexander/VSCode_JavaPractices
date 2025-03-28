@@ -60,7 +60,7 @@ public class ejercicio12 {
                       break;
 
                   case 0:
-                      System.out.println("Estado Academico: Reprobado");
+                      System.out.println("Estado Academico: Reprobado/Suspendido");
                       break;
 
                   default:
