@@ -21,7 +21,7 @@ public class Ejercicio33 {
                 System.out.print("-> ");
                 codigo[i] = input.nextLine();
 
-                if (codigo[i] == "") {
+                if (codigo[i].isEmpty()) {
                     System.out.println("\nError: El Codigo No Puede Estar Vacio\n");
                 } else {
                     System.out.println("\nCodigo Ingresado: " + codigo[i] + "\n");
@@ -113,7 +113,7 @@ public class Ejercicio33 {
                         }
                     } while (cantLitros <= 0);
                 }
-            } while (codigo[i] == "");
+            } while (codigo[i].isEmpty());
 
             if(codigo[i].equalsIgnoreCase("1")){
                 productoUno = productoUno + cantLitros;
