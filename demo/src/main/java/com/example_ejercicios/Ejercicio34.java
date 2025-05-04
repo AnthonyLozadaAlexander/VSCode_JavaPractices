@@ -10,8 +10,11 @@ public class Ejercicio34 {
         c = Integer.parseInt(JOptionPane.showInputDialog("Introduce el valor de c: "));
         double determinante = Math.pow(b,2) - (4*a*c);
         if(determinante > 0){
-
-        }else{
+            double x1 = ((b * (-1)) + Math.sqrt(determinante)) / (2 * a);
+            double x2 = ((b * (-1)) - Math.sqrt(determinante)) / (2 * a);
+        }
+        else
+        {
             System.out.println("\nEl Determinante es negativo, no tiene solución real");
         }
 
