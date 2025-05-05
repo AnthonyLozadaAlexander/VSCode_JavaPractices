@@ -4,6 +4,7 @@ public class Cuadratica {
     int a = 0;
     int b = 0;
     int c = 0;
+
     public Cuadratica(){
         a = Integer.parseInt(JOptionPane.showInputDialog("Introduce el valor de a: "));
         b = Integer.parseInt(JOptionPane.showInputDialog("Introduce el valor de b: "));
@@ -22,6 +23,6 @@ public class Cuadratica {
         }
     }
     public static void main(String[] args) {
-        new Cuadratica();
+        new Cuadratica(); // instancia de la clase
     }
 }
